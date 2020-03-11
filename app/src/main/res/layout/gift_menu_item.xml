@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@drawable/gift_select"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:focusable="true"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/zem63"
+        >
+    </ImageView>
+    <TextView
+        android:id="@+id/gift_name"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="完美蛋糕"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/icon_money"
+        app:layout_constraintTop_toBottomOf="@id/gift_name"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/money">
+    </ImageView>
+    <TextView
+        android:id="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/gift_name"
+        app:layout_constraintStart_toEndOf="@+id/icon_money"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#eee"
+        android:textSize="10dp"
+        android:text="2000"
+        >
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

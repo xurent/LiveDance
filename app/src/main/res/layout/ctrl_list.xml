@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/work1"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/default_tv1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            >
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/aixin"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/love_like"
+                android:background="@drawable/text_view"
+                >
+            </ImageView>
+            <TextView
+                android:id="@+id/love_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#fff"
+                android:background="@drawable/text_view"
+                android:text="100w">
+            </TextView>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

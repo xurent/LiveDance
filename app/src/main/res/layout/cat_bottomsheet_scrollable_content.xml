@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gift_recycle"
+        android:background="#808080"
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/gift_recycle"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="120dp">
+        </androidx.recyclerview.widget.RecyclerView>
+        <RelativeLayout
+            app:layout_constraintTop_toBottomOf="@+id/gift_recycle"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="45dp">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/money"></ImageView>
+            <TextView
+                android:id="@+id/balance"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/icon"
+                android:text="5000"
+                android:textColor="#fff"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/make_blance"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/balance"
+                android:text="充值"
+                android:autoLink="all"
+                android:textColor="#0000FF"
+                >
+            </TextView>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gift_num"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/make_blance"
+                android:layout_width="70dp"
+                android:text="1"
+                android:maxLength="5"
+                android:inputType="number"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_gift"
+                android:layout_width="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="40dp"
+                android:text="发送"
+                android:textColor="#fff"
+                android:theme="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView">
+                >
+            </com.google.android.material.button.MaterialButton>
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+

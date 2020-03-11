@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_below="@+id/tx_focus"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:elevation="1dp"
+    android:layout_margin="8dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/focus_img"
+            android:layout_width="150dp"
+            app:layout_constraintEnd_toStartOf="@+id/foucus_head"
+            android:layout_height="match_parent"
+            android:src="@drawable/head"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/live_peple"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/people"
+            app:layout_constraintStart_toStartOf="@+id/focus_img"
+            app:layout_constraintBottom_toBottomOf="@+id/focus_img"
+            android:background="@drawable/text_view"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/focus_num"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="#fff"
+            android:text="1648"
+            app:layout_constraintBottom_toBottomOf="@+id/focus_img"
+            app:layout_constraintStart_toEndOf="@+id/live_peple"
+            android:background="@drawable/text_view"
+            >
+        </TextView>
+        <com.xurent.livedance.LiveRoom.utils.CircleImageView
+            app:layout_constraintStart_toEndOf="@+id/focus_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/foucus_head"
+            android:layout_width="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="50dp"
+            android:src="@drawable/head"
+            />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:text="甜面酱拒绝哈哈哈"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/foucus_head"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/fenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="面酱今天土不土"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/foucus_head"
+            >
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

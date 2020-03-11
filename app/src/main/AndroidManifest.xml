@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xurent.livedance">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity" android:theme="@style/AppThemeStart"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".LiveRoom.MagicTextViewActivity" />
+        <activity android:name=".LiveRoomActivity"></activity>
+        <activity android:name=".activity.VRplayActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity android:name=".activity.UserOtherActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.UpdateUserInfoActivity"></activity>
+        <activity android:name=".activity.Video2DActivity"></activity>
+        <activity android:name=".LiveRoom.CreateLiveRoom"></activity>
+        <activity android:name=".push.LivePushActivity"
+            android:theme="@style/AppThemeFullScreen"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.MoreLiveActivity"></activity>
+        <activity android:name=".activity.VideoActivity"></activity>
+        <activity android:name=".activity.PlayerX"></activity>
+        <activity android:name=".activity.PlayerV"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.xurent.livedance.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

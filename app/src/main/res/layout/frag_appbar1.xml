@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_view"
+                android:layout_height="150dp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/video2D"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_red"
+                        >
+                    </ImageView>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bli1"
+                        >
+                    </ImageView>
+
+
+                    <TextView
+                        android:layout_gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="60dp"
+                        android:textColor="#fff"
+                        android:text="传统"
+                        android:textStyle="bold"
+                        style="@style/CardView"
+                        android:textSize="20dp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="bottom"
+                        android:id="@+id/video3D"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_blue"
+                        >
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bli2"
+                        >
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="60dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:text="VR"
+                        android:textSize="20dp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="推荐视频"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/index_mokuai1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:text="更多"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/video_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/work1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            >
+                        </ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/img_love"
+                            app:layout_constraintBottom_toBottomOf="@+id/video_img"
+                            app:layout_constraintStart_toStartOf="@+id/video_img"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/love_like"
+                            android:background="@drawable/text_view"
+                            >
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/video_number"
+                            app:layout_constraintBottom_toBottomOf="@+id/video_img"
+                            app:layout_constraintStart_toEndOf="@+id/img_love"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/text_view"
+                            android:text="100w">
+                        </TextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/video_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/work2"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            >
+                        </ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/img_love1"
+                            app:layout_constraintBottom_toBottomOf="@+id/video_img1"
+                            app:layout_constraintStart_toStartOf="@+id/video_img1"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/love_like"
+                            android:background="@drawable/text_view"
+                            >
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/video_number1"
+                            app:layout_constraintBottom_toBottomOf="@+id/video_img1"
+                            app:layout_constraintStart_toEndOf="@+id/img_love1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/text_view"
+                            android:text="100w">
+                        </TextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <!--我的关注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="火热直播"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/index_mokuai2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:text="更多"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/mtrl_card_spacing"
+                        android:clickable="true"
+
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/live_img"
+                                app:layout_constraintBottom_toTopOf="@+id/live_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/zf"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                >
+                            </ImageView>
+
+                            <ImageView
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/people"
+                                app:layout_constraintEnd_toStartOf="@+id/live_number"
+                                android:background="@drawable/text_view"
+                                >
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/live_name"
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img"
+                                app:layout_constraintStart_toStartOf="@+id/live_img"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="20dp"
+                                android:textSize="12dp"
+                                android:textColor="#fff"
+                                android:background="@drawable/text_view"
+                                android:text="桃酥">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/live_number"
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img"
+                                app:layout_constraintEnd_toEndOf="@+id/live_img"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="20dp"
+                                android:textSize="12dp"
+                                android:textColor="#fff"
+                                android:background="@drawable/text_view"
+                                android:text="100w">
+                            </TextView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/live_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:text="你会吹口哨吗?"
+                        android:textColor="#000"
+                        android:layout_gravity="bottom">
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/fenlei"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/live_title"
+                        android:layout_height="18dp"
+                        android:textSize="12dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="王者荣耀"
+                        >
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/mtrl_card_spacing"
+                        android:clickable="true"
+
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/live_img1"
+                                app:layout_constraintBottom_toTopOf="@+id/live_name1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/work3"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                >
+                            </ImageView>
+
+                            <ImageView
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/people"
+                                app:layout_constraintEnd_toStartOf="@+id/live_number1"
+                                android:background="@drawable/text_view"
+                                >
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/live_name1"
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img1"
+                                app:layout_constraintStart_toStartOf="@+id/live_img1"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="20dp"
+                                android:textSize="12dp"
+                                android:textColor="#fff"
+                                android:background="@drawable/text_view"
+                                android:text="可爱学妹">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/live_number1"
+                                app:layout_constraintBottom_toBottomOf="@+id/live_img1"
+                                app:layout_constraintEnd_toEndOf="@+id/live_img1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textSize="12dp"
+                                android:textColor="#fff"
+                                android:background="@drawable/text_view"
+                                android:text="123w">
+                            </TextView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/live_title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:text="隔空对唱"
+                        android:textColor="#000"
+                        android:layout_gravity="bottom">
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/fenlei1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/live_title"
+                        android:layout_height="18dp"
+                        android:textSize="12dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="音乐"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--主题专场-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="主题专场"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/index_mokuai3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:text="更多"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/mtrl_card_spacing"
+                    android:clickable="true"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/work4"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        >
+
+                    </ImageView>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/mtrl_card_spacing"
+                    android:clickable="true"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/work5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        >
+
+                    </ImageView>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

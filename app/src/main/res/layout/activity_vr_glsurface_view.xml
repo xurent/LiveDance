@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xurent.myplayer.vr.VrSurfaceView
+        android:id="@+id/play_vr_glsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/linerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:id="@+id/play_state"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/pause"
+            android:layout_alignParentLeft="true"
+            android:onClick="ChanegState"
+            ></ImageView>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            ></SeekBar>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:text="00:00/00:00"
+            ></TextView>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/change_display_mode_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:textSize="20sp"
+            android:src="@mipmap/glasses_2d"
+            />
+
+        <ImageView
+            android:id="@+id/change_interaction_mode_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:textSize="20sp"
+            android:src="@mipmap/on_3d"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <com.xurent.livedance.LiveRoom.utils.CircleImageView
+            android:id="@+id/head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:textSize="20sp"
+            android:onClick="AboutUser"
+            android:src="@drawable/head"
+           />
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/dislike"
+            android:textSize="20sp"
+            android:onClick="LikeState"
+            android:paddingTop="10dp"
+            />
+        <TextView
+            android:id="@+id/number_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="18dp"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/share"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:onClick="send"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LiveDance</string>
+
+    <string name="bottom_sheet_behavior_1" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+
+    <string-array name="cat_list_popup_window_content" translatable="false">
+        <item>录制视频</item>
+        <item>图片生成</item>
+    </string-array>
+
+</resources>

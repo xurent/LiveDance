@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.xurent.livedance.camera.CameraView
+        android:id="@+id/cameraview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></com.xurent.livedance.camera.CameraView>
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="@+id/cameraview"
+        android:id="@+id/ll_anchor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_radius_top_black"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="55dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="十三妹哦"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/people" />
+
+                    <TextView
+                        android:id="@+id/online_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:tag="0"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.xurent.livedance.LiveRoom.utils.CircleImageView
+                android:id="@+id/lv_anchorIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/zf"
+                app:border_color="@color/colorAccent"
+                app:border_width="1dp" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/behaver"
+            android:layout_toEndOf="@+id/info"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_radius_top_black"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/state_img"
+                android:layout_width="15dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/red_piont"
+                >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/state"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/state_img"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在连接"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/time"
+               app:layout_constraintTop_toBottomOf="@+id/state"
+                app:layout_constraintStart_toEndOf="@+id/state_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/exit_live"
+            android:layout_width="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="exit"
+            android:layout_height="22dp"
+            android:src="@mipmap/exit"
+            >
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gift_group"
+        app:layout_constraintBottom_toTopOf="@+id/lv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lv_message"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:animateLayoutChanges="true"
+        android:gravity="top"
+        android:orientation="vertical" />
+    <ListView
+        android:id="@+id/lv_message"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/foot"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="#00000000"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/foot"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraview"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/utils"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/push_bt"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/danmu_open"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/mopen"
+                android:onClick="Danmu"
+                >
+            </ImageView>
+            <ImageView
+                android:id="@+id/change_camera"
+                android:layout_width="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/danmu_open"
+                android:onClick="ChangeCamera"
+                android:layout_height="35dp"
+                android:src="@mipmap/camera"
+                >
+
+            </ImageView>
+
+
+            <ImageView
+                android:layout_toStartOf="@+id/receive_gift"
+                android:id="@+id/tv_chat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:src="@mipmap/chat"
+                android:onClick="SendText"
+                android:textColor="#333"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/receive_gift"
+                android:layout_width="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/gift"
+                android:onClick="showGift"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_inputparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:hint="在此输入你要说的话!"
+                    android:maxLength="30"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#888889"
+                    android:textColorHint="#c8c8c8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/holo_blue_bright"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:onClick="tvSend"
+                    android:text="发送"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/push_bt"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="48dp"
+            android:onClick="startpush"
+            android:layout_alignParentBottom="true"
+            android:text="开始直播"
+            >
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

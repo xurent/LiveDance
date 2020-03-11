@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="5dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+
+                <ImageView
+                    android:id="@+id/video_img"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/acter_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:src="@drawable/zf"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/love_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/video_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/love_like"
+                    app:layout_constraintStart_toStartOf="@+id/video_img"
+                    android:background="@drawable/text_view"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/acter_name"
+                    app:layout_constraintTop_toBottomOf="@+id/video_img"
+                    app:layout_constraintStart_toStartOf="@+id/video_img"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:lines="1"
+                    android:textSize="12dp"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:text="桃酥">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/video_number"
+                    app:layout_constraintBottom_toBottomOf="@+id/video_img"
+                    app:layout_constraintStart_toEndOf="@+id/love_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/text_view"
+                    android:text="100w">
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/video_time"
+                    app:layout_constraintTop_toBottomOf="@+id/video_img"
+                    app:layout_constraintEnd_toEndOf="@+id/video_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    android:text="2020-2-24/20:09">
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+</LinearLayout>

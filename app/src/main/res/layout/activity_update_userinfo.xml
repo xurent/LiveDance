@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/userinfo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完善资料"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:textColor="#000"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳过"
+            android:textSize="15dp"
+            android:layout_alignParentRight="true"
+            android:onClick="jump"
+            >
+
+        </TextView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:elevation="1dp"
+            android:onClick="uploadImg"
+            app:shapeAppearance="@style/ShapeAppearanceImageLeft"
+            app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+            app:strokeColor="?attr/colorSecondary"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击上传头像"
+            android:textColor="#000"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="昵称"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_gravity="center"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:maxLength="11"
+            android:lines="1"
+            android:inputType="text"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        android:hint="个人简介"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/jiesao"
+            android:layout_gravity="center"
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:maxLength="100"
+            android:maxLines="3"
+            android:lines="3"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:onClick="submit"
+        app:shapeAppearance="@style/ShapeAppearanceImageLeft"
+        app:srcCompat="@drawable/ic_done_black_24dp"
+        app:strokeColor="?attr/colorSecondary"
+        />
+
+</LinearLayout>

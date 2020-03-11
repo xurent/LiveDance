@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="@drawable/music_select"
+    android:focusableInTouchMode="true"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:padding="1dp"
+    android:clickable="true"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_gravity="center"
+        android:id="@+id/music_img"
+        android:layout_width="90dp"
+        android:layout_height="85dp"
+        android:src="@drawable/banner3"
+        app:shapeAppearance="@style/ShapeAppearance"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        >
+    </com.google.android.material.imageview.ShapeableImageView>
+    <TextView
+        android:id="@+id/music_name"
+        android:layout_width="100dp"
+        android:layout_height="22dp"
+        android:text="不仅仅是喜欢"
+        android:textSize="10dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        >
+    </TextView>
+
+</LinearLayout>
