@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -108,7 +109,9 @@ public class PlayerX extends Activity {
             public void onParpared() {
                 MyLog.d("开始播放----");
                 System.out.println("播放");
-                wlPlayer.start();
+                if(wlPlayer!=null){
+                    wlPlayer.start();
+                }
             }
         });
         wlPlayer.setWlOnloadListener(new WlOnloadListener() {
@@ -270,6 +273,17 @@ public class PlayerX extends Activity {
         super.onDestroy();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {//
+            if(wlPlayer!=null){
+                wlPlayer.setOk(false);
+                wlPlayer.stop();
+                wlPlayer=null;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     public void  touchHead(View view) {
       if(info!=null){

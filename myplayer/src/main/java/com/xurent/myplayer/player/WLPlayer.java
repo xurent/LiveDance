@@ -58,6 +58,15 @@ public class WLPlayer {
     private Surface surface;
     private MediaCodec.BufferInfo info;
     private boolean isOpenVr=false;
+    private boolean ok=true;
+    public void setOk(boolean ok) {
+        this.ok = ok;
+    }
+
+    public boolean isOk() {
+        return ok;
+    }
+
     public WLPlayer() {
     }
 
@@ -171,7 +180,9 @@ public class WLPlayer {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                n_parpared(source);
+                if(ok){
+                    n_parpared(source);
+                }
                 MyLog.d("播放开始");
             }
         }).start();
@@ -185,7 +196,10 @@ public class WLPlayer {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                n_start();
+                if(ok){
+                    n_start();
+                }
+
             }
         }).start();
     }
@@ -199,7 +213,6 @@ public class WLPlayer {
     }
 
     public void resume() {
-
         n_resume();
         if (wlOnPauseResumeListener != null) {
             wlOnPauseResumeListener.onPause(false);

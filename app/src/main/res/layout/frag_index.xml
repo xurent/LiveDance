@@ -24,33 +24,29 @@
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayoutHome"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="?attr/actionBarSize"
                 android:paddingTop="5dp"
                 android:paddingBottom="10dp">
 
                 <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="推荐" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="最新" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="分类" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="排行" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="专题" />
             </com.google.android.material.tabs.TabLayout>

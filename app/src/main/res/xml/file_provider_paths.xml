@@ -8,5 +8,8 @@
     <files-path
         name="path"
         path="."></files-path>
+    <external-files-path name="mq_external_files" path="Pictures" />
+
+
 
 </paths>

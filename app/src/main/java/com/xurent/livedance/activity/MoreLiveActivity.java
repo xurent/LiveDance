@@ -1,15 +1,19 @@
 package com.xurent.livedance.activity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import com.xurent.livedance.LiveRoomActivity;
 import com.xurent.livedance.R;
 import com.xurent.livedance.common.Constants;
 import com.xurent.livedance.http.RoomService;
@@ -23,6 +27,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -61,11 +66,30 @@ public class MoreLiveActivity extends AppCompatActivity {
 
         initNet();//初始化网络
         getData();//初始化数据
+        liveAdapter.setmOnItemClickListener(new LiveAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent=new Intent(MoreLiveActivity.this, LiveRoomActivity.class);
+                intent.putExtra("anchor",Datas.get(position));
+                System.out.println("----"+Datas.get(position));
+                startActivity(intent);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                new MaterialAlertDialogBuilder(MoreLiveActivity.this)
+                        .setTitle("举报对象: "+Datas.get(position).getUsername()+Datas.get(position).getNickname())
+                        .setView(R.layout.edit_text)
+                        .setPositiveButton(
+                                "提交",null)
+                        .setNegativeButton("取消", null).create().show();
+            }
+        });
     }
 
     private  void getData(){
         RoomService service=retrofit.create(RoomService.class);
-        Call<JsonObject> call=service.getAllRoom(1,20);
+        Call<JsonObject> call=service.getAllRoom(1,200);
         System.out.println(call.request());
         call.enqueue(new Callback<JsonObject>() {
             @SuppressLint("WrongConstant")

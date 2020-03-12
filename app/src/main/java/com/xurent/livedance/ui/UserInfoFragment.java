@@ -25,6 +25,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import com.xurent.livedance.R;
+import com.xurent.livedance.activity.ImageActivity;
 import com.xurent.livedance.activity.PlayerV;
 import com.xurent.livedance.activity.PlayerX;
 import com.xurent.livedance.activity.VideoActivity;
@@ -289,6 +290,7 @@ public class UserInfoFragment extends Fragment {
 
 
 
+    @SuppressLint("WrongConstant")
     private ListPopupWindow initializeListPopupMenu(View v) {
         ListPopupWindow listPopupWindow =
                 new ListPopupWindow(getContext(), null, R.attr.listPopupWindowStyle);
@@ -307,11 +309,16 @@ public class UserInfoFragment extends Fragment {
                             Snackbar.LENGTH_LONG)
                             .show();
                     listPopupWindow.dismiss();*/
+                    if(!Constants.LOGIN){
+                        Toast.makeText(getContext(),"请先登录",0).show();
+                        listPopupWindow.dismiss();
+                        return;
+                    }
                     Intent intent=new Intent(getActivity().getApplicationContext(), VideoActivity.class);
                     switch (position){
                         case 0: intent=new Intent(getActivity().getApplicationContext(), VideoActivity.class);
                             break;
-                        case 1:
+                        case 1:intent=new Intent(getActivity().getApplicationContext(), ImageActivity.class);
                             break;
                     }
                     startActivity(intent);

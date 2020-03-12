@@ -60,14 +60,14 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.0-beta11'
-
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.7.1'
-    /*compile 'com.github.franmontiel:PersistentCookieJar:v1.0.0'*/
     implementation project(path: ':myplayer')
     implementation 'ywl.ywl5320:libmusic:1.2.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
     implementation  'com.neovisionaries:nv-websocket-client:2.2'
+    implementation 'com.zhihu.android:matisse:0.5.2-beta4'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 }

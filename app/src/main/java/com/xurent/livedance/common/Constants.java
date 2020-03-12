@@ -2,7 +2,7 @@ package com.xurent.livedance.common;
 
 public class Constants {
 
-    public  static final String root_url="http://192.168.43.254:8081/";
+    public  static final String root_url="http://hexurong.xyz:8081/";
 
     public static final String token_url=root_url+"liveDance/";
 
@@ -12,7 +12,7 @@ public class Constants {
 
     public static  final String music_url=root_url+"music/";
 
-    public static  final  String ws_url="ws://192.168.43.254:8081/";
+    public static  final  String ws_url="ws://hexurong.xyz:8081/";
 
     public static  final  String ws_room=ws_url+"liveDance/chat/";
 

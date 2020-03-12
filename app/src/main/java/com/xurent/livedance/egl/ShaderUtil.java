@@ -50,7 +50,7 @@ public class ShaderUtil {
             GLES20.glGetShaderiv(shader, GLES20.GL_COMPILE_STATUS, compile, 0);
             if(compile[0] != GLES20.GL_TRUE)
             {
-                Log.d("ywl5320", "shader compile error");
+                Log.d("xurent", "shader compile error");
                 GLES20.glDeleteShader(shader);
                 shader = 0;
             }
@@ -88,6 +88,7 @@ public class ShaderUtil {
         paint.setColor(Color.parseColor(textColor));
         paint.setTextSize(textSize);
         paint.setStyle(Paint.Style.FILL);
+        paint.setFakeBoldText(true);
         paint.setAntiAlias(true);
 
         float width=paint.measureText(text,0,text.length());

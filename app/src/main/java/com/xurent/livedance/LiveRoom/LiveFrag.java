@@ -127,7 +127,9 @@ public class LiveFrag extends Fragment implements OnOpenLiveListner{
             public void onParpared() {
                 MyLog.d("直播播放----");
                 System.out.println("播放");
-                wlPlayer.start();
+               if(wlPlayer!=null){
+                   wlPlayer.start();
+               }
                 canPlay=1;
             }
         });

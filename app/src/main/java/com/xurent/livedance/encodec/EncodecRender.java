@@ -52,7 +52,7 @@ public class EncodecRender implements EGLSurfaceView.GLRender {
         this.context = context;
         this.textureid = textureid;
 
-        bitmap = ShaderUtil.createTextImage("视频直播和推流：GUET桂电", 50, "#ff0000", "#00000000", 0);
+        bitmap = ShaderUtil.createTextImage("LiveDance", 50, "#DCDCDC", "#00000000", 0);
 
         float r = 1.0f * bitmap.getWidth() / bitmap.getHeight();
         float w = r * 0.1f;

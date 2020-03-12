@@ -10,6 +10,8 @@ import com.google.android.material.tabs.TabLayout;
 import com.xurent.livedance.R;
 import com.xurent.livedance.ui.viewpager.AppBarFrag1;
 import com.xurent.livedance.ui.viewpager.AppBarFrag2;
+import com.xurent.livedance.ui.viewpager.AppBarFrag3;
+import com.xurent.livedance.ui.viewpager.AppBarFrag4;
 
 
 import androidx.fragment.app.Fragment;
@@ -54,11 +56,9 @@ public class IndexFragment extends Fragment {
                   break;
               case 1:fragment=new AppBarFrag2();
                   break;
-              case 2:
+              case 2:fragment=new AppBarFrag3();
                   break;
-              case 3:
-                  break;
-              case 4:
+              case 3:fragment=new AppBarFrag4();
                   break;
           }
             //事务

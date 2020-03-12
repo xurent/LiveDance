@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
@@ -44,13 +45,11 @@ import com.youth.banner.util.BannerUtils;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -74,7 +73,7 @@ public class LiveFragment extends Fragment {
     private Retrofit retrofit=null;
     LinkedList<LiveRoomBean> Datas=new LinkedList<>();
     private Button bt_all;
-    private ConstraintLayout focus;
+    private MaterialCardView focus;
     private ArrayList<LiveRoomBean> rooms=null;
     private  TextView living_num;
     private  ImageView focusImg;
@@ -332,8 +331,13 @@ public class LiveFragment extends Fragment {
         });
         //我要直播
         fb_live.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("WrongConstant")
             @Override
             public void onClick(View view) {
+                if(!Constants.LOGIN){
+                    Toast.makeText(getContext(),"请先登录",0).show();
+                    return;
+                }
                 Intent intent=new Intent(getActivity().getApplicationContext(), CreateLiveRoom.class);
                 startActivity(intent);
             }

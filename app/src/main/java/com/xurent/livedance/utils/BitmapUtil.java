@@ -127,7 +127,7 @@ public class BitmapUtil {
         //将原图画在缩放之后的矩形上
         canvas.drawBitmap(bitmap, null, rectF, null);
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        result.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+        result.compress(Bitmap.CompressFormat.PNG, 50, bos);
         File newFile=new File(fileDir, originFile.getName());
         try {
             FileOutputStream fos = new FileOutputStream(newFile);

@@ -301,6 +301,7 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/live"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_weight="1"
@@ -312,8 +313,6 @@
                         android:layout_height="120dp"
                         android:layout_weight="1"
                         android:layout_margin="@dimen/mtrl_card_spacing"
-                        android:clickable="true"
-
                         >
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -399,6 +398,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/live1"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_weight="1"
@@ -410,8 +410,6 @@
                         android:layout_height="120dp"
                         android:layout_weight="1"
                         android:layout_margin="@dimen/mtrl_card_spacing"
-                        android:clickable="true"
-
                         >
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"

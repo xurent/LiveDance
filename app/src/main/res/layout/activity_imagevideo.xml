@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+
+    <com.xurent.livedance.imgvideo.WlImgVideoView
+        android:id="@+id/cameraview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.xurent.livedance.imgvideo.WlImgVideoView>
+
+    <ImageView
+        android:id="@+id/chooseMusic"
+        app:layout_constraintTop_toTopOf="@id/cameraview"
+        app:layout_constraintEnd_toEndOf="@id/cameraview"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:onClick="chooseMusic"
+        android:src="@drawable/ic_queue_music_black_24dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textColor="#F5F5F5"
+        android:textStyle="bold"
+        android:text="50"
+        android:textSize="30dp"
+        android:visibility="gone"
+        >
+    </TextView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintBottom_toTopOf="@+id/btn_record"
+        android:id="@+id/music_recycle"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="120dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        app:layout_constraintBottom_toBottomOf="@+id/cameraview"
+        app:layout_constraintStart_toStartOf="parent"
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/btn_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:theme="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        android:onClick="choose"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorSecondary"
+        android:text="选择照片"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        app:layout_constraintBottom_toBottomOf="@+id/cameraview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/btn_record"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:theme="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        android:onClick="start"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorSecondary"
+        android:text="开始合成"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        app:layout_constraintBottom_toBottomOf="@+id/cameraview"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        android:layout_toEndOf="@+id/btn_record"
+        android:id="@+id/upload"
+        android:layout_width="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="uploadVideo"
+        android:theme="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
+        android:text="上传"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorSecondary"
+        style="?attr/materialButtonOutlinedStyle"
+        android:visibility="gone"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

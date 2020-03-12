@@ -44,6 +44,7 @@
         <activity android:name=".activity.PlayerV"
             android:screenOrientation="landscape"
             android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity android:name=".activity.ImageActivity"></activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.xurent.livedance.fileProvider"

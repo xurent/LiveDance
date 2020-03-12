@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.SurfaceHolder;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,6 +48,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.microedition.khronos.egl.EGL10;
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.egl.EGLDisplay;
+import javax.microedition.khronos.egl.EGLSurface;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -115,7 +122,9 @@ public class Video2DActivity extends AppCompatActivity {
             public void onParpared() {
                 MyLog.d("开始播放----");
                 System.out.println("播放");
-                wlPlayer.start();
+                if(wlPlayer!=null){
+                    wlPlayer.start();
+                }
                 slide=false;
             }
         });
@@ -206,9 +215,10 @@ public class Video2DActivity extends AppCompatActivity {
                 //slide=false;
             }
         });
+
+
         InitAll();
     }
-
 
 
     private void InitAll(){
@@ -219,6 +229,7 @@ public class Video2DActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {//如果返回键按下
             if(wlPlayer!=null){
+                wlPlayer.setOk(false);
                 wlPlayer.stop();
             }
             finish();
@@ -231,6 +242,7 @@ public class Video2DActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         if(wlPlayer!=null){
+            wlPlayer.setOk(false);
             wlPlayer.stop();
         }
         super.onDestroy();
@@ -310,6 +322,7 @@ public class Video2DActivity extends AppCompatActivity {
                         Init();
                         initLike();
                     }else{
+                        glSurfaceView.setListen(false);
                         Toast.makeText(Video2DActivity.this,"没有视频数据",0).show();
                     }
                 }else{
@@ -460,7 +473,9 @@ public class Video2DActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         if(wlPlayer!=null){
-            wlPlayer.stop();
+           wlPlayer.pause();
+            playState.setImageResource(R.mipmap.pause);
+            state=!state;
         }
         super.onStop();
     }

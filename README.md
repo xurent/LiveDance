@@ -52,6 +52,18 @@ liveDance VR直播APP
 ![视频列表](img/5.gif)
 ![刷礼物发弹幕](img/6.gif)
 
+![j截图](img/6.png)
+![j截图](img/1.jpg)
+![j截图](img/2.jpg)
+![j截图](img/3.jpg)![j截图](img/4.jpg)
+![j截图](img/6.jpg)
+![j截图](img/7.jpg)
+![j截图](img/8.jpg)
+![j截图](img/9.jpg)
+![j截图](img/10.jpg)
+![j截图](img/11.jpg)
+
+
 
 ### 2.环境配置
 
@@ -266,5 +278,7 @@ void getMessage(JSONObject data) throws JSONException;//消息回调等等..
 
 ```
 
-<font color="red">不想写了，太多了，就主要列举了一些，这个项目包括后端，流媒体端以及客户端都是我一个人开发，比较完整，如果对次有兴趣，或者想知道一些原理的，可以关注一下我博客，虽然我很久才发一下文章，我还是个没毕业的菜鸟，主要还是写一下我理解的音视频原理吧</font>
+
+<font color="red">这个项目包括后端，流媒体端以及客户端都是我一个人开发，比较完整，如果对次有兴趣，或者想知道一些原理的，可以关注一下我博客</font>
+ps：如果对你有帮助，点下 star 就是对我最大的认可。
 [博客](https://blog.csdn.net/qq_37704417)
