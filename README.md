@@ -52,18 +52,18 @@ liveDance VR直播APP
 ![视频列表](img/5.gif)
 ![刷礼物发弹幕](img/6.gif)
 
-<img src="https://github.com/xurent/LiveDance/blob/master/img/6.png" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/1.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/2.jpg" width="375" height="430"  />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/3.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/4.jpg" width="375" height="430"  />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/5.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/6.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/7.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/8.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/9.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/10.jpg" width="375" height="430" />
-<img src="https://github.com/xurent/LiveDance/blob/master/img/11.jpg" width="375" height="430" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/6.png" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/1.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/2.jpg" width="375" height="520"  />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/3.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/4.jpg" width="375" height="520"  />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/5.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/6.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/7.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/8.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/9.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/10.jpg" width="375" height="520" />
+<img src="https://github.com/xurent/LiveDance/blob/master/img/11.jpg" width="375" height="520" />
 
 
 
