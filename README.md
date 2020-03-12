@@ -52,8 +52,9 @@ liveDance VR直播APP
 ![视频列表](img/5.gif)
 ![刷礼物发弹幕](img/6.gif)
 
-![j截图](img/6.png {width=40px height=400px})
-![image](img/1.jpg "Title" {width=40px height=400px})
+<img src="https://github.com/xurent/LiveDance/tree/master/img/6.png" />
+
+![截图](img/6.png)
 ![j截图](img/1.jpg)
 ![j截图](img/2.jpg)
 ![j截图](img/3.jpg)![j截图](img/4.jpg)
