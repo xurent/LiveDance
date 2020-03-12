@@ -284,3 +284,5 @@ void getMessage(JSONObject data) throws JSONException;//消息回调等等..
 <font color="red">这个项目包括后端，流媒体端以及客户端都是我一个人开发，比较完整，如果对次有兴趣，或者想知道一些原理的，可以关注一下我博客</font>
 ps：如果对你有帮助，点下 star 就是对我最大的认可。
 [博客](https://blog.csdn.net/qq_37704417)
+</br>
+[安装包](https://hexurong.xyz:8080/live.apk)
